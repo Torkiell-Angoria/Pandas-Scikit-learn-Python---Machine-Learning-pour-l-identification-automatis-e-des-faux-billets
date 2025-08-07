@@ -24,7 +24,7 @@ Les bibliothèques et outils suivants ont été utilisés :
 
 ---
 
-## 📦 Livrables attendus
+##  Livrables attendus
 
 Le projet doit être livré sous la forme d’un dossier compressé `.zip`, contenant les éléments suivants :
 
@@ -95,4 +95,3 @@ Elle effectue pour chaque billet :
 L’application génère ensuite un **nouveau fichier Excel** enrichi avec ces résultats, facilitant ainsi l’analyse et la prise de décision pour les équipes de l’ONCFM.
 
 Cette solution simple, rapide et efficace permettra une utilisation opérationnelle immédiate dans la lutte contre la contrefaçon.
----
