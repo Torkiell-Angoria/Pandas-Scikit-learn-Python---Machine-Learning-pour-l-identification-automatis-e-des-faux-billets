@@ -69,9 +69,30 @@ Une **présentation claire et synthétique** du projet, à destination du client
 
 ---
 
-##  Résultat attendu
+##  Choix du modèle final
 
-Le livrable final doit permettre à l’ONCFM de disposer d’un outil de **prédiction fiable, rapide et simple d’utilisation**, basé sur une analyse rigoureuse des données.  
-Grâce à cette application, les équipes de terrain pourront **identifier en temps réel les faux billets** et ainsi renforcer l’efficacité de leur lutte contre le faux-monnayage.
+Après avoir testé plusieurs algorithmes de classification (K-means, Régression Logistique, KNN, Random Forest), j’ai retenu **le modèle de régression logistique** comme modèle final pour cette mission.
 
+Bien que tous les modèles aient présenté des scores de performance très élevés (notamment au niveau du F1-score), la régression logistique s’est distinguée par plusieurs avantages clés :
+
+- Elle offre une **excellente performance prédictive** dans ce contexte.
+- Elle permet d’**interpréter facilement l’importance des variables** utilisées dans le modèle, ce qui est un atout important pour la compréhension et la confiance des utilisateurs.
+- Elle est **plus rapide à entraîner et à exécuter** que certains modèles plus complexes comme la Random Forest.
+
+Cependant, il est important de noter que ce modèle repose sur une séparation essentiellement linéaire des classes. Si, à l’avenir, de nouvelles variables venaient à être ajoutées et rendaient la frontière de décision plus complexe (non linéaire), il faudra envisager de **changer de modèle** pour un algorithme plus flexible adapté à ces situations.
+
+---
+
+##  Description de l’application finale
+
+L’application développée prend en entrée un **fichier Excel contenant des données géométriques des billets** (longueur, largeur, hauteur, etc.). 
+
+Elle effectue pour chaque billet :
+
+- Le calcul de la **probabilité** qu’il soit un vrai ou un faux billet,
+- La **prédiction finale** : classée comme **VRAI** ou **FAUX** billet.
+
+L’application génère ensuite un **nouveau fichier Excel** enrichi avec ces résultats, facilitant ainsi l’analyse et la prise de décision pour les équipes de l’ONCFM.
+
+Cette solution simple, rapide et efficace permettra une utilisation opérationnelle immédiate dans la lutte contre la contrefaçon.
 ---
